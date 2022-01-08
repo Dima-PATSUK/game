@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css'
 
-export  function News() {
-    <div className="container">
-    TTS-Help
-    </div>
-    }
+export default function News() {
+    return (
+        <div className="container">
+            TTS-News
+        </div>
+    )
+}

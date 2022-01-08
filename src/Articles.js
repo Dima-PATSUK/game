@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-export  function Articles() {
-    <div className="container">
-    TTS-Help
-    </div>
-    }
+export default function Articles() {
+    return (
+        <div className="container">
+            TTS-Articles
+        </div>
+    )
+}
