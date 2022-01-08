@@ -15,6 +15,7 @@ export default function NaviBar(){
 
     return (
  <>
+ <div className="container">
    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
        <Container>
        <Navbar.Brand style={{marginLeft :200}}>ИграНет</Navbar.Brand>
@@ -32,8 +33,8 @@ export default function NaviBar(){
 
            <Col me="auto">
            <Nav className="lime accent-1">
-               <Button variant="success" className="" > Log In</Button>
-               <Button variant="warning" style={{marginLeft :9}} > Sign Out</Button>
+               <Button variant="success" className="" href="/log"> Log In</Button>
+               <Button variant="warning" style={{marginLeft :9}} href="/sing"> Sign Out</Button>
            </Nav>
            </Col>
            </Row>
@@ -41,5 +42,6 @@ export default function NaviBar(){
        </Navbar.Collapse>
        </Container>
    </Navbar>
+   </div>
  </>
 )}

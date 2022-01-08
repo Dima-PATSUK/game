@@ -13,6 +13,8 @@ import {
 import Articles from './Articles';
 import News from './News';
 import Help from './Help';
+import Log_In from './Log In';
+import Sign_Out from './Sign Out';
 
 
 
@@ -28,6 +30,11 @@ function App ()  {
                       <Route exact path="/" element={<Articles/>} />
                       <Route path="/news" element={<News/>} />
                       <Route path="/help" element={<Help/>} />
+                      
+                      
+                       <Route path="/log" element={<Log_In/>} />
+                      <Route path="/sing" element={<Sign_Out/>} /> 
+                      
                   </Routes>
               </Router>
           </body>

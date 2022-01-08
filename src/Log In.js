@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-export default function News() {
+export default function Log_In () {
     return (
         <div className="container">
-            TTS-News
+            gg
         </div>
     )
 }

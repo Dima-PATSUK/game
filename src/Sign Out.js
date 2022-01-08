@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-export default function News() {
+export default function Sign_Out () {
     return (
         <div className="container">
-            TTS-News
+            ww
         </div>
     )
 }
