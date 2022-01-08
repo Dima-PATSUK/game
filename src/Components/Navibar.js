@@ -1,17 +1,18 @@
-import React from 'react';
-import { Nav, Navbar, Button, Container, Row, Col } from 'react-bootstrap';
+import React, {useState} from 'react';
+import { Nav, Navbar, Button, Container, Row, Col, Modal, Form } from 'react-bootstrap';
 
-import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-    Link
-} from 'react-router-dom';
+
+
 import News from '../News'
 import Articles from '../Articles'
 import Help from '../Help'
 
 export default function NaviBar(){
+
+    const[show,setShow]=useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
  <>
@@ -33,8 +34,8 @@ export default function NaviBar(){
 
            <Col me="auto">
            <Nav className="lime accent-1">
-               <Button variant="success" className="" href="/log"> Log In</Button>
-               <Button variant="warning" style={{marginLeft :9}} href="/sing"> Sign Out</Button>
+               <Button variant="success"  /*href="/log"*/ onClick={handleShow}> Log In</Button>
+               <Button variant="warning" style={{marginLeft :9}}  /*href="/sing"*/  onClick={handleShow}> Sign Out</Button>
            </Nav>
            </Col>
            </Row>
@@ -42,6 +43,29 @@ export default function NaviBar(){
        </Navbar.Collapse>
        </Container>
    </Navbar>
+   <Modal show={show} onHide={handleClose}>
+       <Modal.Hader closeButton>
+           <Modal.Title>Log In</Modal.Title>
+       </Modal.Hader>
+       <Modal.Body>
+           <Form>
+               <Form.Group controlId="fromBasicEmail">
+                   <Form.Label>Email</Form.Label>
+                   <Form.Control type="email" placeholder="Enter email"/>
+                   <Form.Text className="text-muted">Введите свой email</Form.Text>
+               </Form.Group>
+
+               <Form.Group controlId="fromBasicPassword">
+                   <Form.Label>Password</Form.Label>
+                   <Form.Control type="Password" placeholder="Enter Password"/>
+               </Form.Group>
+
+               <Form.Group controlId="fromBasicCheackbox">
+                   <Form.Check type="checkbox" label="Remeber me"/>
+               </Form.Group>
+           </Form>
+       </Modal.Body>
+   </Modal>
    </div>
  </>
 )}
